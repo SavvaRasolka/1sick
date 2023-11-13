@@ -45,9 +45,9 @@ mvn clean compile
 mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 ```
 
-<details><summary></summary>
+<details><summary># Документация API для системы сбора и обработки данных о погоде</summary>
 
- # Документация API для системы сбора и обработки данных о погоде
+ 
 
 ## Введение
 
@@ -168,10 +168,6 @@ API обрабатывает ошибки запросов и возвращае
 - 400 Bad Request: Некорректный запрос или данные.
 - 404 Not Found: Ресурс не найден.
 - 500 Internal Server Error: Внутренняя ошибка сервера.
-
-## 7. Документация API
-
-Подробная документация, включая описания эндпоинтов, форматы запросов и ответов, доступна по адресу {server.ip}/documentation.
 
 
 </details>
