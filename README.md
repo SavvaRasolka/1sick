@@ -66,16 +66,17 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 Путь: /sensors/registration
 
 Тело запроса:
+```json
 {
   "name": "Sensor name"
 }
-
+```
 ### Ответ
-
+```
 {
   "key": "8bcb5ffa-ff4d-4214-a727-bb01ab90ceaa"
 }
-
+```
 ### Ошибки
 
 - 400 Bad Request: Если сенсор с таким названием уже существует или название сенсора некорректно.
