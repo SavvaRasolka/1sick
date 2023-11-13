@@ -45,9 +45,7 @@ mvn clean compile
 mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 ```
 
-# <details><summary>Документация API для системы сбора и обработки данных о погоде</summary>
-
- 
+# Документация API для системы сбора и обработки данных о погоде
 
 ## Введение
 
@@ -90,11 +88,12 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 Путь: /sensors/{key}/measurements
 
 Тело запроса:
+```json
 {
   "value": 24.5,
   "raining": false
 }
-
+```
 ### Ошибки
 
 - 400 Bad Request: Если данные не проходят валидацию (например, неверный формат температуры).
@@ -109,7 +108,7 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 
 ### Ответ
 
-[
+```json
   {
     "name": "Sensor name",
     "status": "active",
@@ -121,7 +120,7 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
     "key": "8bcb5ffa-ff4d-4214-a727-bb01ab90ceaa"
   },
   // ... другие сенсоры
-]
+```
 
 ## 4. Получение информации о последних измерениях сенсора
 
@@ -132,16 +131,14 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 Путь: /sensors/{key}/measurements
 
 ### Ответ
-
-[
-  {
+```json
+{
     "value": 24.5,
     "raining": false,
     "timestamp": "2023-11-13T12:30:45Z"
   },
   // ... другие измерения
-]
-
+```
 ## 5. Получение актуальной информации от всех сенсоров
 
 ### Запрос
@@ -151,7 +148,7 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 Путь: /sensors/measurements
 
 ### Ответ
-
+```json
 [
   {
     "name": "Sensor name",
@@ -161,7 +158,7 @@ mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
   },
   // ... другие измерения от всех активных сенсоров
 ]
-
+```
 ## 6. Обработка ошибок
 
 API обрабатывает ошибки запросов и возвращает понятные сообщения:
@@ -170,6 +167,4 @@ API обрабатывает ошибки запросов и возвращае
 - 404 Not Found: Ресурс не найден.
 - 500 Internal Server Error: Внутренняя ошибка сервера.
 
-
-</details>
 
