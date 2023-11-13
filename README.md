@@ -45,7 +45,7 @@ mvn clean compile
 mvn exec:java -Dexec.mainClass=com.example.weatherAPI.WeatherApiApplication
 ```
 
-<details><summary># Документация API для системы сбора и обработки данных о погоде</summary>
+<details><summary>Документация API для системы сбора и обработки данных о погоде</summary>
 
  
 
